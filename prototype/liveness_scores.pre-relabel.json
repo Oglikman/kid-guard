@@ -1,0 +1,2602 @@
+[
+ {
+  "kind": "live",
+  "fused": 0.3272,
+  "per_model": [
+   0.4462,
+   0.2082
+  ],
+  "ts": "2026-11-23T15:27:47",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.1879,
+  "per_model": [
+   0.2719,
+   0.1039
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.1667,
+  "per_model": [
+   0.16,
+   0.1735
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.5256,
+  "per_model": [
+   0.3635,
+   0.6877
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.6827,
+  "per_model": [
+   0.6749,
+   0.6906
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8144,
+  "per_model": [
+   0.8801,
+   0.7487
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.685,
+  "per_model": [
+   0.5872,
+   0.7829
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.3659,
+  "per_model": [
+   0.2521,
+   0.4798
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.7618,
+  "per_model": [
+   0.641,
+   0.8825
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.4987,
+  "per_model": [
+   0.1495,
+   0.8479
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.801,
+  "per_model": [
+   0.6833,
+   0.9186
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.7377,
+  "per_model": [
+   0.5464,
+   0.929
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8168,
+  "per_model": [
+   0.7486,
+   0.885
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8548,
+  "per_model": [
+   0.9304,
+   0.7793
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8353,
+  "per_model": [
+   0.7815,
+   0.8891
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8675,
+  "per_model": [
+   0.8252,
+   0.9098
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9562,
+  "per_model": [
+   0.9305,
+   0.9818
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9102,
+  "per_model": [
+   0.8418,
+   0.9786
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.956,
+  "per_model": [
+   0.9468,
+   0.9653
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9632,
+  "per_model": [
+   0.9635,
+   0.9629
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9407,
+  "per_model": [
+   0.9207,
+   0.9606
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9534,
+  "per_model": [
+   0.922,
+   0.9847
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9676,
+  "per_model": [
+   0.946,
+   0.9892
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9801,
+  "per_model": [
+   0.9684,
+   0.9918
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9867,
+  "per_model": [
+   0.9818,
+   0.9915
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9111,
+  "per_model": [
+   0.8505,
+   0.9717
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9698,
+  "per_model": [
+   0.9593,
+   0.9802
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8997,
+  "per_model": [
+   0.82,
+   0.9794
+  ],
+  "ts": "2026-11-23T15:27:48",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8622,
+  "per_model": [
+   0.7604,
+   0.964
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9504,
+  "per_model": [
+   0.9675,
+   0.9333
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9593,
+  "per_model": [
+   0.9608,
+   0.9578
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8468,
+  "per_model": [
+   0.7789,
+   0.9147
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.7928,
+  "per_model": [
+   0.7434,
+   0.8422
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8321,
+  "per_model": [
+   0.8934,
+   0.7707
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.7576,
+  "per_model": [
+   0.8311,
+   0.684
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9098,
+  "per_model": [
+   0.9043,
+   0.9153
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8207,
+  "per_model": [
+   0.8978,
+   0.7436
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9699,
+  "per_model": [
+   0.9808,
+   0.9591
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9811,
+  "per_model": [
+   0.9802,
+   0.982
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9567,
+  "per_model": [
+   0.9403,
+   0.973
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9393,
+  "per_model": [
+   0.9391,
+   0.9395
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.505,
+  "per_model": [
+   0.1698,
+   0.8403
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.6213,
+  "per_model": [
+   0.5635,
+   0.6791
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.2751,
+  "per_model": [
+   0.4423,
+   0.1079
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.5461,
+  "per_model": [
+   0.1911,
+   0.9011
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.6347,
+  "per_model": [
+   0.3511,
+   0.9182
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8912,
+  "per_model": [
+   0.8166,
+   0.9657
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9465,
+  "per_model": [
+   0.9626,
+   0.9305
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8789,
+  "per_model": [
+   0.786,
+   0.9717
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9015,
+  "per_model": [
+   0.8962,
+   0.9067
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9416,
+  "per_model": [
+   0.9423,
+   0.9408
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9664,
+  "per_model": [
+   0.9602,
+   0.9726
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9615,
+  "per_model": [
+   0.9802,
+   0.9428
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9485,
+  "per_model": [
+   0.9537,
+   0.9432
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9576,
+  "per_model": [
+   0.9707,
+   0.9444
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8164,
+  "per_model": [
+   0.675,
+   0.9578
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8648,
+  "per_model": [
+   0.8505,
+   0.8791
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9118,
+  "per_model": [
+   0.8752,
+   0.9483
+  ],
+  "ts": "2026-11-23T15:27:49",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9716,
+  "per_model": [
+   0.9823,
+   0.9608
+  ],
+  "ts": "2026-11-23T15:27:50",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9047,
+  "per_model": [
+   0.8835,
+   0.9258
+  ],
+  "ts": "2026-11-23T15:27:50",
+  "note": "me, normal light, facing camera"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:34",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:34",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:35",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:35",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:35",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:35",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:35",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:35",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:35",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0001,
+  "per_model": [
+   0.0002,
+   0.0
+  ],
+  "ts": "2026-11-23T15:33:35",
+  "note": "phone photo, whole face on screen, 60% brightness, steady"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0117,
+  "per_model": [
+   0.0235,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:23",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0157,
+  "per_model": [
+   0.0315,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:23",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0044,
+  "per_model": [
+   0.0088,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:23",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0144,
+  "per_model": [
+   0.0287,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:23",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0076,
+  "per_model": [
+   0.0152,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:23",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0383,
+  "per_model": [
+   0.0765,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0052,
+  "per_model": [
+   0.0105,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0,
+  "per_model": [
+   0.0001,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0094,
+  "per_model": [
+   0.0188,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0044,
+  "per_model": [
+   0.0089,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0007,
+  "per_model": [
+   0.0014,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.005,
+  "per_model": [
+   0.0099,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0001,
+  "per_model": [
+   0.0003,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0029,
+  "per_model": [
+   0.0059,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0072,
+  "per_model": [
+   0.0143,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:24",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0171,
+  "per_model": [
+   0.0343,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0025,
+  "per_model": [
+   0.005,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0094,
+  "per_model": [
+   0.0187,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0044,
+  "per_model": [
+   0.0089,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0318,
+  "per_model": [
+   0.0636,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.0668,
+  "per_model": [
+   0.1336,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.1025,
+  "per_model": [
+   0.2051,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.014,
+  "per_model": [
+   0.028,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.1221,
+  "per_model": [
+   0.2441,
+   0.0
+  ],
+  "ts": "2026-11-23T15:35:25",
+  "note": "phone photo #2, steady, whole face"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8852,
+  "per_model": [
+   0.9248,
+   0.8456
+  ],
+  "ts": "2026-11-23T18:48:23",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9838,
+  "per_model": [
+   0.9848,
+   0.9829
+  ],
+  "ts": "2026-11-23T18:48:23",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9958,
+  "per_model": [
+   0.9964,
+   0.9951
+  ],
+  "ts": "2026-11-23T18:48:23",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9939,
+  "per_model": [
+   0.9902,
+   0.9975
+  ],
+  "ts": "2026-11-23T18:48:23",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9964,
+  "per_model": [
+   0.9952,
+   0.9976
+  ],
+  "ts": "2026-11-23T18:48:23",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9934,
+  "per_model": [
+   0.993,
+   0.9938
+  ],
+  "ts": "2026-11-23T18:48:23",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9987,
+  "per_model": [
+   0.9987,
+   0.9987
+  ],
+  "ts": "2026-11-23T18:48:23",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9973,
+  "per_model": [
+   0.9977,
+   0.9969
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9982,
+  "per_model": [
+   0.9984,
+   0.998
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.999,
+  "per_model": [
+   0.9993,
+   0.9987
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9983,
+  "per_model": [
+   0.9979,
+   0.9987
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.998,
+  "per_model": [
+   0.9983,
+   0.9978
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9981,
+  "per_model": [
+   0.9989,
+   0.9973
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9988,
+  "per_model": [
+   0.9989,
+   0.9987
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9988,
+  "per_model": [
+   0.9992,
+   0.9983
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9994,
+  "per_model": [
+   0.9993,
+   0.9996
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9989,
+  "per_model": [
+   0.9992,
+   0.9985
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9996,
+  "per_model": [
+   0.9997,
+   0.9995
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9993,
+  "per_model": [
+   0.9995,
+   0.999
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9993,
+  "per_model": [
+   0.9991,
+   0.9996
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9985,
+  "per_model": [
+   0.9986,
+   0.9985
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9995,
+  "per_model": [
+   0.9993,
+   0.9996
+  ],
+  "ts": "2026-11-23T18:48:24",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9993,
+  "per_model": [
+   0.9991,
+   0.9995
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9994,
+  "per_model": [
+   0.999,
+   0.9998
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9981,
+  "per_model": [
+   0.9972,
+   0.9989
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9989,
+  "per_model": [
+   0.9986,
+   0.9992
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9994,
+  "per_model": [
+   0.9993,
+   0.9995
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9993,
+  "per_model": [
+   0.9993,
+   0.9993
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9989,
+  "per_model": [
+   0.9984,
+   0.9995
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9994,
+  "per_model": [
+   0.9993,
+   0.9995
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9992,
+  "per_model": [
+   0.9991,
+   0.9993
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9956,
+  "per_model": [
+   0.9973,
+   0.994
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9989,
+  "per_model": [
+   0.9984,
+   0.9993
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9984,
+  "per_model": [
+   0.9971,
+   0.9997
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9978,
+  "per_model": [
+   0.9971,
+   0.9985
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9956,
+  "per_model": [
+   0.9928,
+   0.9985
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9971,
+  "per_model": [
+   0.9984,
+   0.9958
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9979,
+  "per_model": [
+   0.9984,
+   0.9973
+  ],
+  "ts": "2026-11-23T18:48:25",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9982,
+  "per_model": [
+   0.9986,
+   0.9979
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9971,
+  "per_model": [
+   0.9951,
+   0.9992
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9974,
+  "per_model": [
+   0.9953,
+   0.9994
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9984,
+  "per_model": [
+   0.9974,
+   0.9994
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9975,
+  "per_model": [
+   0.9953,
+   0.9998
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9982,
+  "per_model": [
+   0.9973,
+   0.9992
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9973,
+  "per_model": [
+   0.9949,
+   0.9997
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9969,
+  "per_model": [
+   0.9942,
+   0.9997
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9988,
+  "per_model": [
+   0.9976,
+   1.0
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9988,
+  "per_model": [
+   0.9977,
+   0.9998
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.999,
+  "per_model": [
+   0.9983,
+   0.9998
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9982,
+  "per_model": [
+   0.9969,
+   0.9996
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9989,
+  "per_model": [
+   0.9981,
+   0.9997
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9979,
+  "per_model": [
+   0.9962,
+   0.9995
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9994,
+  "per_model": [
+   0.9989,
+   0.9998
+  ],
+  "ts": "2026-11-23T18:48:26",
+  "note": "me, dim light, facing camera"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9747,
+  "per_model": [
+   0.9903,
+   0.9592
+  ],
+  "ts": "2026-11-23T18:48:50",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9872,
+  "per_model": [
+   0.9938,
+   0.9806
+  ],
+  "ts": "2026-11-23T18:48:50",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9923,
+  "per_model": [
+   0.9965,
+   0.9882
+  ],
+  "ts": "2026-11-23T18:48:50",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.8938,
+  "per_model": [
+   0.9661,
+   0.8215
+  ],
+  "ts": "2026-11-23T18:48:50",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9522,
+  "per_model": [
+   0.9914,
+   0.913
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9679,
+  "per_model": [
+   0.9936,
+   0.9422
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9966,
+  "per_model": [
+   0.9974,
+   0.9959
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9789,
+  "per_model": [
+   0.9959,
+   0.9619
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.99,
+  "per_model": [
+   0.9981,
+   0.982
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9971,
+  "per_model": [
+   0.9982,
+   0.9959
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9967,
+  "per_model": [
+   0.9985,
+   0.9948
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9984,
+  "per_model": [
+   0.998,
+   0.9987
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9985,
+  "per_model": [
+   0.9991,
+   0.9979
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9972,
+  "per_model": [
+   0.9984,
+   0.996
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9909,
+  "per_model": [
+   0.9978,
+   0.9841
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9952,
+  "per_model": [
+   0.9985,
+   0.9919
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9874,
+  "per_model": [
+   0.998,
+   0.9768
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9984,
+  "per_model": [
+   0.9987,
+   0.9981
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9957,
+  "per_model": [
+   0.9987,
+   0.9927
+  ],
+  "ts": "2026-11-23T18:48:51",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9955,
+  "per_model": [
+   0.9971,
+   0.9939
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9937,
+  "per_model": [
+   0.9978,
+   0.9897
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9918,
+  "per_model": [
+   0.9988,
+   0.9849
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9944,
+  "per_model": [
+   0.9994,
+   0.9893
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9875,
+  "per_model": [
+   0.9989,
+   0.9761
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9962,
+  "per_model": [
+   0.999,
+   0.9934
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9892,
+  "per_model": [
+   0.9992,
+   0.9793
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9864,
+  "per_model": [
+   0.9985,
+   0.9743
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9906,
+  "per_model": [
+   0.9986,
+   0.9825
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9931,
+  "per_model": [
+   0.9936,
+   0.9926
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9969,
+  "per_model": [
+   0.9979,
+   0.9958
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9954,
+  "per_model": [
+   0.9986,
+   0.9922
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9975,
+  "per_model": [
+   0.9992,
+   0.9958
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9956,
+  "per_model": [
+   0.999,
+   0.9923
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9949,
+  "per_model": [
+   0.9987,
+   0.991
+  ],
+  "ts": "2026-11-23T18:48:52",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9961,
+  "per_model": [
+   0.9983,
+   0.9939
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9956,
+  "per_model": [
+   0.999,
+   0.9922
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9975,
+  "per_model": [
+   0.9985,
+   0.9965
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9991,
+  "per_model": [
+   0.9991,
+   0.999
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9991,
+  "per_model": [
+   0.999,
+   0.9992
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9993,
+  "per_model": [
+   0.9994,
+   0.9993
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9991,
+  "per_model": [
+   0.999,
+   0.9993
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9978,
+  "per_model": [
+   0.9975,
+   0.9981
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9979,
+  "per_model": [
+   0.9973,
+   0.9985
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.998,
+  "per_model": [
+   0.9984,
+   0.9975
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9975,
+  "per_model": [
+   0.9986,
+   0.9965
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9987,
+  "per_model": [
+   0.9979,
+   0.9996
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9981,
+  "per_model": [
+   0.9976,
+   0.9985
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.997,
+  "per_model": [
+   0.9947,
+   0.9992
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9971,
+  "per_model": [
+   0.998,
+   0.9963
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9966,
+  "per_model": [
+   0.9971,
+   0.9962
+  ],
+  "ts": "2026-11-23T18:48:53",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9961,
+  "per_model": [
+   0.9976,
+   0.9947
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9973,
+  "per_model": [
+   0.9974,
+   0.9972
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9977,
+  "per_model": [
+   0.9968,
+   0.9986
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9963,
+  "per_model": [
+   0.9977,
+   0.9949
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9979,
+  "per_model": [
+   0.998,
+   0.9978
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9965,
+  "per_model": [
+   0.9986,
+   0.9944
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9954,
+  "per_model": [
+   0.9961,
+   0.9947
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9974,
+  "per_model": [
+   0.9964,
+   0.9985
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9968,
+  "per_model": [
+   0.9972,
+   0.9964
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "live",
+  "fused": 0.9983,
+  "per_model": [
+   0.9976,
+   0.999
+  ],
+  "ts": "2026-11-23T18:48:54",
+  "note": "me, angled head ~30deg"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9581,
+  "per_model": [
+   0.9607,
+   0.9554
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9859,
+  "per_model": [
+   0.9794,
+   0.9924
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9936,
+  "per_model": [
+   0.9889,
+   0.9983
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9678,
+  "per_model": [
+   0.942,
+   0.9936
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9689,
+  "per_model": [
+   0.9585,
+   0.9792
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.933,
+  "per_model": [
+   0.9211,
+   0.9449
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9402,
+  "per_model": [
+   0.9036,
+   0.9769
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.959,
+  "per_model": [
+   0.9328,
+   0.9853
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.956,
+  "per_model": [
+   0.9518,
+   0.9602
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9246,
+  "per_model": [
+   0.8752,
+   0.9741
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9288,
+  "per_model": [
+   0.9099,
+   0.9476
+  ],
+  "ts": "2026-11-23T18:49:48",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9321,
+  "per_model": [
+   0.8839,
+   0.9802
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9423,
+  "per_model": [
+   0.9095,
+   0.9751
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9616,
+  "per_model": [
+   0.9274,
+   0.9957
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9545,
+  "per_model": [
+   0.914,
+   0.9949
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9786,
+  "per_model": [
+   0.9624,
+   0.9949
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9454,
+  "per_model": [
+   0.8971,
+   0.9938
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9496,
+  "per_model": [
+   0.9122,
+   0.9871
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9791,
+  "per_model": [
+   0.9647,
+   0.9935
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9496,
+  "per_model": [
+   0.9386,
+   0.9606
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9302,
+  "per_model": [
+   0.9008,
+   0.9596
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9206,
+  "per_model": [
+   0.8734,
+   0.9678
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9442,
+  "per_model": [
+   0.9391,
+   0.9492
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9051,
+  "per_model": [
+   0.8348,
+   0.9754
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9294,
+  "per_model": [
+   0.8819,
+   0.9769
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9542,
+  "per_model": [
+   0.9206,
+   0.9877
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9561,
+  "per_model": [
+   0.9245,
+   0.9877
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9638,
+  "per_model": [
+   0.941,
+   0.9866
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9723,
+  "per_model": [
+   0.9527,
+   0.9918
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9709,
+  "per_model": [
+   0.9562,
+   0.9856
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9459,
+  "per_model": [
+   0.9554,
+   0.9364
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9752,
+  "per_model": [
+   0.9771,
+   0.9733
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9693,
+  "per_model": [
+   0.9669,
+   0.9717
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9676,
+  "per_model": [
+   0.9663,
+   0.9688
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9715,
+  "per_model": [
+   0.9535,
+   0.9895
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9766,
+  "per_model": [
+   0.9616,
+   0.9916
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9697,
+  "per_model": [
+   0.9623,
+   0.977
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9343,
+  "per_model": [
+   0.9154,
+   0.9532
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.8925,
+  "per_model": [
+   0.8028,
+   0.9822
+  ],
+  "ts": "2026-11-23T18:49:49",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9254,
+  "per_model": [
+   0.8853,
+   0.9654
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9449,
+  "per_model": [
+   0.9024,
+   0.9874
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9221,
+  "per_model": [
+   0.874,
+   0.9703
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.932,
+  "per_model": [
+   0.8797,
+   0.9843
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9431,
+  "per_model": [
+   0.8989,
+   0.9873
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9308,
+  "per_model": [
+   0.8931,
+   0.9685
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9774,
+  "per_model": [
+   0.9686,
+   0.9862
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9809,
+  "per_model": [
+   0.973,
+   0.9887
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9848,
+  "per_model": [
+   0.9863,
+   0.9834
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9943,
+  "per_model": [
+   0.9937,
+   0.9948
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9976,
+  "per_model": [
+   0.997,
+   0.9982
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9956,
+  "per_model": [
+   0.9929,
+   0.9983
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.997,
+  "per_model": [
+   0.9966,
+   0.9975
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ },
+ {
+  "kind": "spoof",
+  "fused": 0.9947,
+  "per_model": [
+   0.9951,
+   0.9942
+  ],
+  "ts": "2026-11-23T18:49:50",
+  "note": "video replay of me on phone"
+ }
+]

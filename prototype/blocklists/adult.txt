@@ -1,0 +1,4 @@
+# PLACEHOLDER sample list, not real sites
+adult-sample.test
+*.adult-sample2.test
+0.0.0.0 adult-hosts-format.test

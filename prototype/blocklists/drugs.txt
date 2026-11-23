@@ -1,0 +1,2 @@
+# PLACEHOLDER sample list, not real sites
+drugs-sample.test

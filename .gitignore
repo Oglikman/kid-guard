@@ -1,0 +1,14 @@
+# biometric data (encrypted per Windows user, never commit)
+templates.bin
+# runtime state and logs
+state.json
+state.json.tmp
+host.log
+# caches
+__pycache__/
+.pytest_cache/
+node_modules/
+# model weights: re-download and hash-check with: py fetch_models.py
+*.onnx
+# machine-specific native-messaging install files (regenerate with install_host.py)
+prototype/native_host_files/

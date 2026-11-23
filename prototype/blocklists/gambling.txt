@@ -1,0 +1,5 @@
+# PLACEHOLDER sample list, not real sites
+gambling-sample.test
+# TEST ENTRY: example.net is a harmless IANA reserved example site that really loads,
+# used to test live blocking/unblocking in a browser. Remove it before real use.
+example.net

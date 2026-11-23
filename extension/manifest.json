@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "KidGuard",
+  "version": "0.1.0",
+  "description": "Applies child-safe browsing rules based on who is at the computer (prototype).",
+  "minimum_chrome_version": "105",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArmTgneXKncvGxVbYf1NjNwpqazZx7jeq2nNolzM21ddoVIUt2o6rQXZYhS8QsguwDoShsaTEUN1ghl8D2c+bQzZHFoP1Zklf+pVDsGMzj7dbf1E4KwYOIbfeskGvEerjaJ/InT+SAgZvwyx23lYVUSOlJ6LwfK+1sR6mfbZ69BKXf7+0XS5ttvw+W9qLhmvPj/U/StI16JycV13FN2wAzkpcJNE1S+kUDlsr/zbS3Q//AR1oXMXBhwifwvKorcUueGF6pQ0wFv23EA1Wns89EQW1+iPaIxiHPjgBkCdpcm09q+h+1AsMVb1maT+BMUcxLVcCIJY4pAi/2pj3WGm4UQIDAQAB",
+  "permissions": ["nativeMessaging", "webNavigation", "tabs", "alarms"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "KidGuard", "default_popup": "popup.html" },
+  "incognito": "spanning"
+}
