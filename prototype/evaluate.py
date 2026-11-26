@@ -219,6 +219,7 @@ def run_one_challenge_attempt(engine, cap, templates, who, threshold, label: str
     """Runs one head-turn attempt on the live camera (first face in view) and returns its result record (no images are stored)."""
     ch, t0 = HeadTurnChallenge(), time.monotonic()
     max_turn, lo, hi, frames, id_frames, passed, direction = 0.0, 0.0, 0.0, 0, 0, False, None
+    trace: list = []      # one [seconds since start, yaw or None, phase after this frame] per loop, to diagnose failed attempts
     while True:
         ok, frame = cap.read()
         now = time.monotonic()
@@ -228,6 +229,7 @@ def run_one_challenge_attempt(engine, cap, templates, who, threshold, label: str
             if faces:
                 yaw = yaw_ratio(faces[0][4:14])
         passed = ch.update(yaw, now)
+        trace.append([round(now - t0, 3), None if yaw is None else round(yaw, 3), ch.phase])
         if yaw is not None:
             frames += 1
             lo, hi = min(lo, yaw), max(hi, yaw)
@@ -246,7 +248,8 @@ def run_one_challenge_attempt(engine, cap, templates, who, threshold, label: str
         if passed or ch.state in ("cooldown", "locked"):
             return {"passed": bool(passed), "direction": direction, "secs": round(now - t0, 2), "max_turn": round(max_turn, 3),
                     "yaw_min": round(lo, 3), "yaw_max": round(hi, 3), "frames_with_face": frames,
-                    "id_match_frac": None if not (who and frames) else round(id_frames / frames, 3)}
+                    "id_match_frac": None if not (who and frames) else round(id_frames / frames, 3),
+                    "neutral_frames_required": config.CHALLENGE_NEUTRAL_FRAMES, "trace": trace}
 
 
 def cmd_ccollect(args) -> int:

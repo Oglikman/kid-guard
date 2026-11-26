@@ -87,7 +87,7 @@ class HeadTurnChallenge:
             return False
         if self.phase == "neutral":
             self.count = self.count + 1 if abs(yaw) < config.YAW_NEUTRAL else 0
-            if self.count >= config.CHALLENGE_FRAMES:
+            if self.count >= config.CHALLENGE_NEUTRAL_FRAMES:
                 self.phase, self.count = "turn", 0
         else:
             self.count = self.count + 1 if turn_progress(yaw, self.direction) >= config.YAW_TURN else 0

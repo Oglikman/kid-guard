@@ -23,14 +23,14 @@ Yaw proxy, per frame, from landmarks (right eye `re`, left eye `le`, nose `n`, i
 1. Identity match says "adult X" (existing F2). MiniFASNet score is kept as a cheap first gate but is no longer trusted alone.
 2. If X is not currently "challenge-passed": state becomes `challenge` (still **strict**), and a random direction is chosen with a CSPRNG (`secrets`).
 3. The user is prompted ("Turn your head to the LEFT"). Within `CHALLENGE_TIMEOUT_S` (default 6 s) we need:
-   a. a neutral phase: |yaw_ratio| < 0.10 for at least 3 frames,
+   a. a neutral phase: |yaw_ratio| < 0.10 for at least 1 frame (originally 3; lowered 2026-11-26 because a quick pass through the centre may have caused live failures, not confirmed),
    b. then a turn: yaw_ratio beyond +/-0.25 in the **requested** direction for at least 3 frames,
    c. the same face identity (SFace match to X) on those frames, so the face cannot be swapped mid-challenge.
 4. Pass -> X is "challenge-passed" -> normal unlock rules continue (5 consecutive adult frames, F5).
 5. Fail or timeout -> stays strict; new challenge allowed after a short cooldown (5 s); after 3 fails in 60 s, a 60 s lockout. Failing never makes anything less strict.
 6. "Challenge-passed" is dropped when the adult leaves view (existing `keep_only` behaviour), or after `REVERIFY_MINUTES` (default off, proposed 30) while still in view, and whenever any other face appears with the adult (child + adult -> strict already, F4).
 
-The numbers (0.10, 0.25, 6 s, 3 frames) are starting guesses; they are tuned in section 6, not claimed.
+The numbers (0.10, 0.25, 6 s, 1 and 3 frames) are starting guesses; they are tuned in section 6, not claimed.
 
 ## 4. Where it fits in the code
 

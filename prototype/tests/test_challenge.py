@@ -44,7 +44,7 @@ def test_turn_progress_direction_and_sign_setting():
 
 
 def test_real_turn_passes_after_neutral_then_turn_frames():
-    """Facing the camera for 3 frames and then turning the requested way for 3 frames passes, and not before."""
+    """Facing the camera and then turning the requested way for 3 frames passes, and not before."""
     ch = HeadTurnChallenge(LEFT)
     res, _ = feed(ch, [0.0] * 3 + [0.4] * 3)
     assert res == [False] * 5 + [True] and ch.state == "passed"
@@ -69,6 +69,20 @@ def test_already_turned_at_start_must_come_back_to_neutral_first():
     ch = HeadTurnChallenge(LEFT)
     res, _ = feed(ch, [0.5] * 20)
     assert not any(res)
+
+
+def test_single_neutral_frame_while_sweeping_through_centre_is_enough():
+    """A head sweeping from one side to the other with only one centred frame can still pass with 3 turned frames."""
+    ch = HeadTurnChallenge(LEFT)
+    res, _ = feed(ch, [-0.8, -0.4, 0.0, 0.4, 0.5, 0.56])
+    assert res == [False] * 5 + [True]
+
+
+def test_swinging_from_other_side_without_a_centred_frame_does_not_pass():
+    """Jumping from one side to the other with no frame inside the neutral zone never starts the turn phase."""
+    ch = HeadTurnChallenge(LEFT)
+    res, _ = feed(ch, [-0.5, -0.2] + [0.4] * 10)
+    assert not any(res) and ch.phase == "neutral"
 
 
 def test_frames_must_be_consecutive_in_each_phase():
@@ -168,9 +182,8 @@ def test_bank_release_all_and_people_are_independent():
 def test_prompt_text_covers_each_state():
     """The on-screen text names the direction while prompting and mentions cooldown and lockout when they apply."""
     ch = HeadTurnChallenge(LEFT)
-    ch.update(0.0, 0.0)
+    ch.update(0.5, 0.0)              # starts off-centre, so the person is first asked to face the camera
     assert "Look at the camera" in prompt_text(ch.prompt(0.0))
-    for y in [0.0] * 3:
-        ch.update(y, 0.1)
+    ch.update(0.0, 0.1)              # one centred frame is enough to move on to the turn
     assert "LEFT" in prompt_text(ch.prompt(0.2))
     assert prompt_text({"state": "idle", "direction": None, "phase": "neutral", "seconds_left": None}) == ""
