@@ -9,9 +9,10 @@ import cv2
 
 from kidguard import config
 from kidguard.camera import draw_camera_indicator, open_camera
-from kidguard.challenge import ChallengeBank, prompt_text, yaw_ratio
+from kidguard.challenge import ChallengeBank, LockedChallenge, prompt_text, yaw_ratio
 from kidguard.engine import FaceEngine, best_match
 from kidguard.liveness import LivenessModel, SmootherBank
+from kidguard.pin import PinEntry, PinGate
 from kidguard.policy import StableLabel, classify, profile_for
 from kidguard.state import write_state
 from kidguard.store import load_templates
@@ -19,11 +20,14 @@ from kidguard.store import load_templates
 
 def label_frame(engine: FaceEngine, frame, templates: dict, threshold: float, liveness=None, bank=None, challenge=None, now=None):
     """Returns (raw_label, per-face (name, role, score, live_score) results); an adult who has not passed the liveness check and the head-turn challenge counts as unknown (PRD F13, F14)."""
-    results, adults_seen, identity_roles = [], [], []
+    results, adults_seen = [], []
     faces = engine.detect(frame)
-    for f in faces:
-        name, role, score = best_match(engine.embed(frame, f), templates, threshold)
-        identity_roles.append(role)
+    matches = [best_match(engine.embed(frame, f), templates, threshold) for f in faces]
+    # Decided BEFORE any challenge update, so no attempt is started (and then failed) while a child or stranger is already in view.
+    mixed = len(faces) > 1 and any(m[1] != "adult" for m in matches)
+    if challenge is not None and mixed:
+        challenge.release_all("other_face")   # a child or stranger joined the adult: passes and attempts under way are dropped
+    for f, (name, role, score) in zip(faces, matches):
         live_score = None
         if role == "adult":
             adults_seen.append(name)
@@ -31,19 +35,17 @@ def label_frame(engine: FaceEngine, frame, templates: dict, threshold: float, li
             if liveness is not None:
                 live_score = liveness.score(frame, f)["fused"]
                 proven = bank.update(name, live_score)
-            if challenge is not None:
-                passed = challenge.update(name, yaw_ratio(f[4:14]), now)   # always updated, so progress is not skipped when liveness is not yet proven
+            if challenge is not None and not mixed:   # when mixed, the child or stranger already forces the strict profile
+                # updated even when liveness is not yet proven, so progress is not skipped
+                passed = challenge.update(name, yaw_ratio(f[4:14]), now)
                 proven = proven and passed
             if not proven:
                 role = None   # identity says adult, but liveness or the challenge is not proven: strict
         results.append((name, role, score, live_score))
     if bank is not None:
         bank.keep_only(adults_seen)   # an adult who left view must pass liveness again
-    if challenge is not None:
-        if len(faces) > 1 and any(r != "adult" for r in identity_roles):
-            challenge.release_all()   # a child or stranger is in view with the adult: passes are dropped
-        else:
-            challenge.keep_only(adults_seen, now)   # an adult unseen for longer than the grace period must pass again
+    if challenge is not None and not mixed:
+        challenge.keep_only(adults_seen, now, face_in_view=bool(faces))   # absent or replaced adults must start again
     return classify([r[1] for r in results]), results
 
 
@@ -76,14 +78,20 @@ def main() -> int:
             write_state("none")
             return 2
         print(f"Liveness threshold: {live_thr}")
-    challenge = None
+    challenge = pin_entry = None
     if args.no_challenge:
         print("WARNING: head-turn challenge is OFF (development only): a still photo that passes liveness can unlock the normal profile.")
+    elif headless:
+        challenge = LockedChallenge()
+        print("NOTE: prompts and PIN entry need the camera window, so a headless run (--seconds / --headless) cannot be unlocked; use --no-challenge for headless development.")
     else:
-        challenge = ChallengeBank()
-        print("Head-turn challenge is ON: an enrolled adult must turn their head when asked before the normal profile unlocks.")
-        if headless:
-            print("NOTE: the prompt is only shown in the camera window, so a headless run (--seconds / --headless) cannot be unlocked; use --no-challenge for headless development.")
+        gate = PinGate()
+        challenge, pin_entry = ChallengeBank(gate=gate), PinEntry(gate)
+        print(f"Head-turn challenge is ON: {config.CHALLENGE_STEPS} random turns. After a failure, type the PIN in the camera window.")
+        if gate.status() == "no_pin":
+            print("No PIN is set, so the profile will stay strict. Close this and run: py set_pin.py")
+        elif gate.status() == "error":
+            print("The PIN file cannot be read, so the profile will stay strict.")
     engine, stable = FaceEngine(), StableLabel(config.UNLOCK_FRAMES)
     try:
         cap = open_camera()
@@ -125,11 +133,19 @@ def main() -> int:
                 cv2.putText(frame, text, (10, 86 + 22 * i), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 1)
             if challenge is not None:
                 for j, p in enumerate(p for p in challenge.prompts().values() if prompt_text(p)):
-                    cv2.putText(frame, prompt_text(p), (10, 140 + 30 * j), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 2)
+                    cv2.putText(frame, prompt_text(p), (10, 140 + 30 * j), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
+            waiting = challenge is not None and any(p["state"] in ("pin", "locked", "no_pin", "error") for p in challenge.prompts().values())
+            if pin_entry is not None and waiting:
+                cv2.putText(frame, pin_entry.text(), (10, frame.shape[0] - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 165, 255), 2)
             cv2.imshow("KidGuard", frame)
-            if cv2.waitKey(1) & 0xFF == ord("q"):
+            code = cv2.waitKey(1) & 0xFF
+            if code == ord("q"):
                 break
+            if pin_entry is not None and waiting:
+                pin_entry.key(code)
     finally:
+        if challenge is not None:
+            challenge.release_all()   # closing during an attempt counts as a failure
         cap.release()
         cv2.destroyAllWindows()
         write_state("none")   # when the camera loop ends, the browser must fall back to strict

@@ -216,10 +216,11 @@ def load_challenge_records() -> list:
 
 
 def run_one_challenge_attempt(engine, cap, templates, who, threshold, label: str) -> dict:
-    """Runs one head-turn attempt on the live camera (first face in view) and returns its result record (no images are stored)."""
+    """Runs one multi-turn attempt on the live camera (first face in view, no PIN) and returns its result record (no images are stored)."""
     ch, t0 = HeadTurnChallenge(), time.monotonic()
-    max_turn, lo, hi, frames, id_frames, passed, direction = 0.0, 0.0, 0.0, 0, 0, False, None
-    trace: list = []      # one [seconds since start, yaw or None, phase after this frame] per loop, to diagnose failed attempts
+    max_turn, lo, hi, frames, id_frames, passed = 0.0, 0.0, 0.0, 0, 0, False
+    sides: list = []      # the sides actually shown, in order
+    trace: list = []      # per loop: [seconds since start, yaw or None, phase, requested side, turns done] after this frame
     while True:
         ok, frame = cap.read()
         now = time.monotonic()
@@ -228,14 +229,16 @@ def run_one_challenge_attempt(engine, cap, templates, who, threshold, label: str
             faces = engine.detect(frame)
             if faces:
                 yaw = yaw_ratio(faces[0][4:14])
+        asked, turning = ch.direction, ch.state == "prompting" and ch.phase == "turn"   # what was on screen for this frame
         passed = ch.update(yaw, now)
-        trace.append([round(now - t0, 3), None if yaw is None else round(yaw, 3), ch.phase])
+        trace.append([round(now - t0, 3), None if yaw is None else round(yaw, 3), ch.phase, ch.direction, ch.step])
+        if ch.state == "prompting" and ch.phase == "turn" and len(sides) == ch.step:
+            sides.append(ch.direction)
         if yaw is not None:
             frames += 1
             lo, hi = min(lo, yaw), max(hi, yaw)
-            if ch.direction:
-                direction = ch.direction
-                max_turn = max(max_turn, turn_progress(yaw, ch.direction))
+            if turning:
+                max_turn = max(max_turn, turn_progress(yaw, asked))
             if who and templates:
                 name, _, score = top_match(engine.embed(frame, faces[0]), templates)
                 id_frames += int(name == who and score >= threshold)
@@ -245,8 +248,9 @@ def run_one_challenge_attempt(engine, cap, templates, who, threshold, label: str
             cv2.imshow("KidGuard challenge", frame)
         if cv2.waitKey(1) & 0xFF == ord("q"):
             raise KeyboardInterrupt
-        if passed or ch.state in ("cooldown", "locked"):
-            return {"passed": bool(passed), "direction": direction, "secs": round(now - t0, 2), "max_turn": round(max_turn, 3),
+        if passed or ch.state == "failed":
+            return {"passed": bool(passed), "sides": sides, "steps_done": ch.step, "steps_required": config.CHALLENGE_STEPS,
+                    "fail_reason": ch.fail_reason, "secs": round(now - t0, 2), "max_turn": round(max_turn, 3),
                     "yaw_min": round(lo, 3), "yaw_max": round(hi, 3), "frames_with_face": frames,
                     "id_match_frac": None if not (who and frames) else round(id_frames / frames, 3),
                     "neutral_frames_required": config.CHALLENGE_NEUTRAL_FRAMES, "trace": trace}
@@ -288,24 +292,28 @@ def cmd_ccollect(args) -> int:
 
 
 def cmd_creport(args) -> int:
-    """Prints head-turn pass rates per kind and note, with the PRD targets (live >= 95%, photo 0 passes in 50) for comparison."""
+    """Prints head-turn pass rates per kind, rule and note; totals against the PRD targets count only attempts made under the current rule."""
     recs = load_challenge_records()
     if not recs:
         print("No challenge data yet. Run: py evaluate.py ccollect --kind live --attempts 20")
         return 1
     groups: dict = {}
     for r in recs:
-        groups.setdefault((r["kind"], r["note"]), []).append(r)
-    for (kind, note), v in sorted(groups.items()):
+        groups.setdefault((r["kind"], r.get("steps_required", 1), r.get("neutral_frames_required", 3), r["note"]), []).append(r)
+    for (kind, steps, neutral, note), v in sorted(groups.items()):
         n, p = len(v), sum(r["passed"] for r in v)
         secs = [r["secs"] for r in v if r["passed"]]
         extra = f", median time to pass {percentile(secs, 50):.1f}s" if secs else ""
         bound = f", 95% upper bound on pass rate ~{3 / n * 100:.0f}% (rule of three)" if p == 0 else ""
-        print(f"{kind:5} {note or '(no note)':40} {p}/{n} passed ({p / n * 100:.0f}%), max turn median {percentile([r['max_turn'] for r in v], 50):.2f}{extra}{bound}")
+        reasons = [r["fail_reason"] for r in v if r.get("fail_reason")]
+        if reasons:
+            extra += ", failures: " + ", ".join(f"{x} {reasons.count(x)}" for x in sorted(set(reasons)))
+        print(f"{kind:5} [{steps} turn(s), {neutral} centred] {note or '(no note)':40} {p}/{n} passed ({p / n * 100:.0f}%), max turn median {percentile([r['max_turn'] for r in v], 50):.2f}{extra}{bound}")
     for kind, target in (("live", "target >= 95% passed"), ("photo", "target 0 passes in 50"), ("video", "no target; report only")):
-        v = [r for r in recs if r["kind"] == kind]
+        v = [r for r in recs if r["kind"] == kind and r.get("steps_required", 1) == config.CHALLENGE_STEPS
+             and r.get("neutral_frames_required", 3) == config.CHALLENGE_NEUTRAL_FRAMES]
         if v:
-            print(f"[{kind} total] {sum(r['passed'] for r in v)}/{len(v)} passed ({target})")
+            print(f"[{kind} total, current rule only] {sum(r['passed'] for r in v)}/{len(v)} passed ({target})")
     return 0
 
 

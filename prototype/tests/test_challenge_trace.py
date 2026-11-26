@@ -5,6 +5,9 @@ import evaluate
 from kidguard import config
 
 
+YAWS = [0.0, None, 0.4, 0.4, 0.4] + [0.0, 0.4, 0.4, 0.4] * 2      # three left turns, with one frame missing a face
+
+
 class FakeCamera:
     """Returns a blank frame every time it is read."""
 
@@ -33,10 +36,12 @@ def test_attempt_record_keeps_every_frame(monkeypatch):
     monkeypatch.setattr(evaluate.cv2, "imshow", lambda *a: None)
     monkeypatch.setattr(evaluate.cv2, "waitKey", lambda *a: -1)
     monkeypatch.setattr(evaluate, "HeadTurnChallenge", lambda: __import__("kidguard.challenge").challenge.HeadTurnChallenge(lambda: "left"))
-    rec = evaluate.run_one_challenge_attempt(FakeEngine([0.0, None, 0.4, 0.4, 0.4]), FakeCamera(), {}, None, 0.0, "1/1")
+    rec = evaluate.run_one_challenge_attempt(FakeEngine(YAWS), FakeCamera(), {}, None, 0.0, "1/1")
     assert rec["passed"] is True
-    assert [row[1] for row in rec["trace"]] == [0.0, None, 0.4, 0.4, 0.4]
-    assert [row[2] for row in rec["trace"]] == ["turn"] * 5
+    assert [row[1] for row in rec["trace"]] == YAWS
+    assert [row[4] for row in rec["trace"]] == [0] * 4 + [1] * 4 + [2] * 4 + [3]
+    assert rec["sides"] == ["left"] * 3 and rec["steps_done"] == 3 and rec["fail_reason"] is None
+    assert rec["max_turn"] == 0.4
     times = [row[0] for row in rec["trace"]]
     assert times == sorted(times)
     assert rec["neutral_frames_required"] == config.CHALLENGE_NEUTRAL_FRAMES

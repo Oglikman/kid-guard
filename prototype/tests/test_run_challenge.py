@@ -43,6 +43,7 @@ class FakeLiveness:
 
 
 ADULT, CHILD = [1, 0], [0, 1]
+TURNS = [0.0, 0.4, 0.4, 0.4] * 3      # three left turns, facing the camera before each
 
 
 def setup():
@@ -68,14 +69,14 @@ def test_still_photo_that_fools_liveness_stays_unknown():
 def test_adult_who_turns_the_requested_way_unlocks():
     """An adult who faces the camera and then turns left is labelled unknown until the challenge completes, then adult."""
     engine, live, bank, ch = setup()
-    labels = run(engine, live, bank, ch, [0.0] * 4 + [0.4] * 4)
-    assert labels[:5] == ["unknown"] * 5 and labels[-1] == "adult"
+    labels = run(engine, live, bank, ch, TURNS)
+    assert labels[:-1] == ["unknown"] * (len(TURNS) - 1) and labels[-1] == "adult"
 
 
 def test_child_present_drops_the_adult_pass():
     """After an adult has passed, a frame with a child also in view releases the pass, so the adult must do the challenge again."""
     engine, live, bank, ch = setup()
-    assert run(engine, live, bank, ch, [0.0] * 4 + [0.4] * 4)[-1] == "adult"
+    assert run(engine, live, bank, ch, TURNS)[-1] == "adult"
     engine.show((ADULT, 0.0), (CHILD, 0.05))
     raw, _ = label_frame(engine, None, TEMPLATES, 0.5, live, bank, ch, 1.0)
     assert raw == "child"
@@ -86,7 +87,7 @@ def test_two_adults_do_not_release_each_other():
     """Two enrolled adults in view together do not drop each other's challenge progress."""
     engine, live, bank, ch = setup()
     templates = dict(TEMPLATES, Dana={"role": "adult", "embeddings": [[0.0, -1.0]]})
-    for i, (y1, y2) in enumerate([(0.0, 0.02)] * 4 + [(0.4, 0.42)] * 4):
+    for i, (y1, y2) in enumerate([(y, y + 0.02) for y in TURNS]):
         engine.show((ADULT, y1), ([0, -1], y2))
         raw, _ = label_frame(engine, None, templates, 0.5, live, bank, ch, 0.1 * i)
     assert raw == "adult"
@@ -97,3 +98,58 @@ def test_no_challenge_object_keeps_the_old_behaviour():
     engine, live, bank, _ = setup()
     labels = [label_frame((engine.show((ADULT, 0.0)), engine)[1], None, TEMPLATES, 0.5, live, bank, None)[0] for _ in range(5)]
     assert labels[-1] == "adult"
+
+
+class SpyGate:
+    """A gate that always allows attempts and records what the challenge tells it."""
+
+    def __init__(self):
+        """Starts with an empty record."""
+        self.events = []
+
+    def status(self):
+        """Always allows an attempt."""
+        return "ok"
+
+    def needs_pin_for_next(self):
+        """No PIN is pending."""
+        return False
+
+    def begin(self, token):
+        """Records that a first turn is about to be shown."""
+        self.events.append("begin")
+        return True
+
+    def succeed(self, token, authorized):
+        """Records a pass."""
+        self.events.append("succeed")
+        return True
+
+    def fail(self, token):
+        """Records a failure."""
+        self.events.append("fail")
+
+
+def test_child_already_present_starts_no_attempt_and_causes_no_failure():
+    """With a child already beside the adult, no turn is shown and no PIN is demanded."""
+    engine, live, _, _ = setup()
+    gate = SpyGate()
+    bank, ch = SmootherBank(0.5), ChallengeBank(lambda: "left", gate)
+    labels = []
+    for i in range(10):
+        engine.show((ADULT, 0.0), (CHILD, 0.05))
+        labels.append(label_frame(engine, None, TEMPLATES, 0.5, live, bank, ch, 0.1 * i)[0])
+    # the first frames read 'unknown' until the adult's liveness is proven; both labels are strict
+    assert "adult" not in labels and labels[-1] == "child" and gate.events == []
+
+
+def test_child_joining_during_an_attempt_fails_it():
+    """A child appearing after the first turn was shown counts as a failure, once."""
+    engine, live, _, _ = setup()
+    gate = SpyGate()
+    bank, ch = SmootherBank(0.5), ChallengeBank(lambda: "left", gate)
+    run(engine, live, bank, ch, [0.0])
+    for i in range(3):
+        engine.show((ADULT, 0.0), (CHILD, 0.05))
+        label_frame(engine, None, TEMPLATES, 0.5, live, bank, ch, 0.2 + 0.1 * i)
+    assert gate.events == ["begin", "fail"]

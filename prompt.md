@@ -16,7 +16,7 @@ Protect underage children from 18+ sites and other harmful content, even when th
 1. **On-device only.** Never upload camera frames or face data. No network calls with biometric data.
 2. **Encrypted storage** of face templates (Windows DPAPI or equivalent). Store templates, not photos.
 3. **Fail safe.** Unknown person, no face, covered camera, or camera error -> strict child profile.
-4. **Liveness check** so a photo or screen cannot pass as an adult: anti-spoofing score plus an active head-turn challenge (PRD F13, F14; design in `DESIGN-liveness-challenge.md`).
+4. **Liveness check** so a photo or screen cannot pass as an adult: anti-spoofing score plus an active head-turn challenge (PRD F13, F14; design in `DESIGN-liveness-challenge.md`). 3 random turns; a wrong-way turn fails; after any failure require the parent PIN and 3 new turns, with a growing lockout for wrong PINs (PRD F15).
 5. **Visible indicator** whenever the camera is active.
 6. **Parent PIN** required to disable protection, change roles, or uninstall; alert/log if the extension is removed.
 7. **Explicit parental consent** screen before any face enrollment.

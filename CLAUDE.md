@@ -22,7 +22,8 @@ Read `PRD.md` first (requirements, status, risks), then `SPEC.md`, `prompt.md`, 
 ## Practical notes (Windows)
 - Use `py`, not `python`, if `python` is the Microsoft Store stub.
 - Only one program can use the camera at a time; a second one gets black frames. Close `run.py` windows before running `evaluate.py`.
-- Use `py run.py --seconds 600 --no-challenge` for browser tests (no window, releases the camera by itself). Without `--no-challenge` a headless run can never unlock, because the head-turn prompt (F14) is only drawn in the camera window.
+- Use `py run.py --seconds 600 --no-challenge` for browser tests (no window, releases the camera by itself). Without `--no-challenge` a headless run can never unlock, because the head-turn prompt (F14) and PIN entry (F15) only work in the camera window.
+- The parent PIN is set by the owner with `py set_pin.py`. Never ask for it in chat, type it, or read or delete `security.bin`.
 - Word locks `PRD.docx` while it is open; close it before regenerating.
 - Face templates (`templates.bin`) are encrypted for one Windows user and are not portable; re-enroll on each machine.
 - Thresholds in `settings.json` are camera-specific; re-measure with `evaluate.py` on each machine.

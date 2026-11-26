@@ -60,16 +60,24 @@ the weights' licence is unconfirmed (see PRD section 7).
 
 ## Head-turn challenge (PRD F14)
 The MiniFASNet liveness score proved unreliable against phone photos on this webcam (76% of photo frames accepted at 0.5; see PRD section 6), so an
-adult must also turn their head to a random side ("Turn your head to YOUR LEFT") before the normal profile unlocks. Yaw comes from YuNet's landmarks
-(`kidguard/challenge.py`). Failure keeps strict; 3 failures in 60 s lock the challenge for 60 s; the pass drops when the adult is out of view for 3 s,
-when a child/stranger is in view, and after 30 minutes. `run.py` shows the prompt in its window; `--no-challenge` is for development only.
+adult must also make **3 head turns in a row**, each to a random side, facing the camera before each one (6 s per step). Yaw comes from YuNet's
+landmarks (`kidguard/challenge.py`). Turning to the wrong side, running out of time, or leaving / showing another face after the first turn is
+requested fails the attempt. The pass drops when the adult is out of view for 3 s, when a child/stranger is in view, and after 30 minutes.
+`run.py` shows the prompt in its window; `--no-challenge` is for development only.
+
+**PIN (PRD F15).** Set it first with `py set_pin.py` (exactly 6 digits; close `run.py` before using it). Without a PIN the profile stays strict.
+After any failure, type the PIN in the camera window and press Enter, then do 3 new turns. Every 3 wrong PINs lock entry for 1, 5, 15, then
+60 minutes. The salted PIN hash and lockout are in `security.bin` (encrypted for this Windows user, not committed). There is no safe
+forgotten-PIN reset yet: deleting `security.bin` removes the PIN, and anyone using this Windows account could do that.
+`ccollect` measures the turns only and never uses or changes the PIN.
 ```
 py evaluate.py ccollect --kind live  --attempts 20 --who Oran --note "normal light"   # real turns (--who also records face-match during the turn)
 py evaluate.py ccollect --kind photo --attempts 50 --note "phone photo, bright, tilted"
 py evaluate.py ccollect --kind video --attempts 20 --note "video of me turning"
 py evaluate.py creport                                                                # pass rates vs the PRD targets
 ```
-Status: built and unit-tested; thresholds (`YAW_NEUTRAL`, `YAW_TURN`, ...) in `config.py` are untuned guesses and the camera behaviour is unmeasured.
+Status: the 3-turn and PIN version is built and unit-tested; one live fail, PIN, pass run worked, and a weak looped-video test passed 0 of 10 (face often not found), so **video resistance is not established**. Results for the earlier single-turn version are in PRD section 6
+(it let a looped video through 7 of 10 times). Thresholds (`YAW_NEUTRAL`, `YAW_TURN`, ...) in `config.py` are untuned guesses.
 If `left`/`right` come out mirrored, set `YAW_SIGN_USER_LEFT = -1.0` in `config.py`. Headless runs (`--seconds`) cannot unlock unless `--no-challenge` is given.
 
 ## Behaviour
@@ -80,7 +88,7 @@ If `left`/`right` come out mirrored, set `YAW_SIGN_USER_LEFT = -1.0` in `config.
 
 ## PRD coverage
 F1 enroll with consent, F2 classify, F3 fail-safe mapping, F4 child+adult, F5 lock fast/unlock slow, F8 camera indicator, F12 delete templates, plus the decision logic behind F6 (URL blocking by profile and category; the browser extension itself is not built).
-Also built since: F6 extension, F7 native messaging, F13 liveness, F14 head-turn challenge. Not here yet: F9 PIN, F10 logs, F11 alerts.
+Also built since: F6 extension, F7 native messaging, F13 liveness, F14 head-turn challenge, F15 PIN step-up. Not here yet: the rest of F9 (PIN to disable, change roles, delete or uninstall), F10 logs, F11 alerts.
 
 ## Honest limits
 - No liveness: a photo or video of an enrolled adult can fool it.

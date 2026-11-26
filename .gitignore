@@ -1,5 +1,8 @@
 # biometric data (encrypted per Windows user, never commit)
 templates.bin
+# encrypted PIN hash and lockout state (never commit)
+security.bin
+security.bin.tmp
 # runtime state and logs
 state.json
 state.json.tmp

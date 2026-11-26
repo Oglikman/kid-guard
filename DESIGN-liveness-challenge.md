@@ -82,3 +82,30 @@ Thresholds in section 3 are tuned on one set of data and then checked on a secon
 4. Wire into `run.py`; manual test in the camera window.
 5. `ccollect` / `creport`, collect data, tune, then verify on a separate session.
 6. Update READMEs with measured results.
+
+## 10. Revision 2026-11-26: 3 turns, wrong-way fail, PIN step-up (approved and BUILT 2026-11-26; first camera checks only, see PRD section 6)
+
+Where this differs from sections 1-9, this section wins. Requirements: PRD F14 and F15.
+Reason: a looped video passed the single-turn challenge in 7 of 10 attempts.
+
+Flow:
+1. Identified adult, not yet passed: 3 steps. Each step picks a side with `secrets`, needs 1 centred frame, then 3 consecutive frames turned to that side, within 6 s per step.
+2. In the turn part of a step, 3 consecutive frames past 0.25 on the other side fail the attempt. 3 frames (not 1) because single-frame spikes were seen in photo tests.
+3. Wrong side, timeout, or abandoning after the first request (leaving view, another face, app closing) is a failure. The pending attempt is saved to disk when it starts, so killing the app also counts.
+4. Any failure sets "PIN required". Correct PIN -> one new 3-step attempt. Another failure -> PIN again.
+5. Wrong PIN: every 3 in a row lock entry for 1, 5, 15, then 60 minutes (proposed). Saved to disk. Changing the computer clock must not shorten a lock while the app is running.
+6. This replaces the earlier 3-failures-in-60-s challenge lockout and 5 s cooldown, since each retry now needs the PIN.
+
+Code plan:
+- `kidguard/challenge.py`: multi-step state machine and wrong-way rule.
+- `kidguard/pin.py` (new): set and verify PIN (`hashlib.scrypt`, random salt), lockout and "PIN required" state. Standard library only.
+- `set_pin.py` (new): parent sets the PIN. Changing it needs the old PIN.
+- `run.py`: PIN entry in the camera window with hidden digits. Headless runs cannot unlock.
+- `evaluate.py ccollect`: uses the 3-step challenge and records each requested side and the failure reason.
+
+Limits: see PRD section 7. A video unrelated to the requests has a theoretical chance of about 1 in 8 per attempt; this is not a measurement.
+An enrolled adult who turns the wrong way, or walks away mid-attempt, will have to type the PIN.
+Forgotten-PIN reset and protection of the files from a same-account user are not solved.
+
+As built: the PIN hash, 'PIN required' flag and lockout share one encrypted file (`security.bin`). A correct PIN must be followed by the first turn within 30 s.
+No attempt starts while a child or stranger is already in view. Headless runs start no attempts. Setting the computer clock forward and restarting the app can shorten a lockout.

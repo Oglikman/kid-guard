@@ -23,7 +23,7 @@ Existing filters lock a device or profile. KidGuard switches rules based on the 
 
 ## Fail-safe rules
 - Unknown person, no face, camera covered, or camera error -> strict (child) profile.
-- Liveness check so a photo cannot pass as an adult: an anti-spoofing score plus an active head-turn challenge (PRD F13, F14).
+- Liveness check so a photo cannot pass as an adult: an anti-spoofing score plus an active head-turn challenge (PRD F13, F14). Built 2026-11-26, only first camera checks (PRD section 6): 3 random turns, a wrong-way turn fails, and after any failure the parent PIN plus 3 new turns (PRD F15).
 - Tamper protection: parent PIN to disable, alert if the app or extension is removed.
 
 ## Harm categories by phase
